@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secret Love Note 💌</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4f0, #ffe8f8);
+      text-align: center;
+      padding: 40px 20px;
+      color: #444;
+    }
+
+    h1 {
+      color: #ff6fb5;
+      font-size: 2em;
+    }
+
+    .btn {
+      background-color: #ff91c5;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background-color: #ff6fb5;
+    }
+
+    #popup {
+      display: none;
+      background-color: #fff0f7;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .gif {
+      margin-top: 20px;
+      width: 140px;
+    }
+
+    form {
+      margin-top: 50px;
+      background: #fff6fb;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-family: inherit;
+    }
+
+    button[type="submit"] {
+      background-color: #ff88c2;
+      color: white;
+      border: none;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #888;
+      font-size: 0.95em;
+    }
+
+    .from-akshu {
+      margin-top: 20px;
+      font-style: italic;
+      color: #cc6699;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Hey Beautiful Soul 💖</h1>
+  <img class="gif" src="https://i.pinimg.com/originals/2f/c2/cf/2fc2cf471e83064a92494d93ffb186c4.gif" alt="Cute girl animation"/>
+
+  <button class="btn" onclick="showMessage()">Click here for a secret message 🌷</button>
+
+  <div id="popup">
+    <p style="font-size: 1.1em;">
+      You are doing better than you think,<br>
+      Even on days you feel like giving up.<br>
+      I see your strength, your beauty, your heart —<br>
+      And I’m always here, no matter what. 🌷💖
+    </p>
+    <p class="from-akshu">— From Akshu 🫂💗</p>
+  </div>
+
+  <form onsubmit="sendSecretMessage(event)">
+    <h3>💬 Send Me a Secret Message</h3>
+    <input type="text" id="name" placeholder="Your Name (optional)">
+    <textarea id="secret" rows="4" placeholder="Type your secret message here..." required></textarea>
+    <button type="submit">Send Secret 🌸</button>
+  </form>
+
+  <footer>
+    📧 Contact me: <a href="mailto:akshubagewadi@gmail.com">akshubagewadi@gmail.com</a>
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function sendSecretMessage(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const secret = document.getElementById("secret").value;
+
+      alert("Thank you! Your secret message has been sent 💌");
+
+      document.getElementById("name").value = '';
+      document.getElementById("secret").value = '';
+    }
+  </script>
+
+</body>
+</html>
